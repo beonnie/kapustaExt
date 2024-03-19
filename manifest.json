@@ -2,8 +2,11 @@
     "name": "kapustaExt",
     "version": "0.1.0",
     "description": "Processing data from Kapusta",
-    "permissions": "",
-
-
+    "permissions": [
+        "activeTab",
+        "storage"],
+    "host_permissions": [
+        "https://kapusta.by/"
+    ],
     "manifest_version": 3
 }
