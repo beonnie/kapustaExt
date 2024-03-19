@@ -1,0 +1,9 @@
+{
+    "name": "kapustaExt",
+    "version": "0.1.0",
+    "description": "Processing data from Kapusta",
+    "permissions": "",
+
+
+    "manifest_version": 3
+}
