@@ -1,13 +1,32 @@
-const renderButton = document.getElementsByClassName("renderButton")[0];
-const dealButton = document.getElementsByClassName("dealButton")[0];
-const borrowButton = document.getElementsByClassName("borrowButton")[0];
-const lendButton = document.getElementsByClassName("lendButton")[0];
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('.borrowButton').addEventListener('click', clickHandler);
-    main();
-  });
+  document.querySelector('.borrowButton').addEventListener('click', borrowClickHandler);
+});
 
-function  clickHandler(){
-    window.location.replace("fff")
+function  borrowClickHandler(){
+  chrome.tabs.create({"url": "http://localhost:8090/kp/v1/getBorrow"});
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('.lendButton').addEventListener('click', lendClickHandler);
+});
+
+function  lendClickHandler(){
+  chrome.tabs.create({"url": "http://localhost:8090/kp/v1/getLend"});
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('.renderButton').addEventListener('click', renderClickHandler);
+});
+
+function  renderClickHandler(){
+  
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('.dealButton').addEventListener('click', dealClickHandler);
+});
+
+function  dealClickHandler(){
+  
 }
