@@ -9,24 +9,16 @@
         "64":"./icons/main64.png",
         "128":"./icons/main128.png"
     },
-    "permissions": [
-        "tabs",
-        "activeTab",
-        "scripting",
-        "storage",
-        "alarms",
-        "notifications"
-    ],
-    "host_permissions": [
-        "<all_urls>"
-    ],
     "content_scripts": [
         {
           "matches": ["<all_urls>"],
-          "js": ["js/button.js"]
+          "run_at": "document_idle",
+          "all_frames": false,
+          "js": ["js/content_script.js"]
         }
       ],
-    "action" : {
-        "default_popup": "./html/popup.html"
+    "host_permissions": ["<all_urls>"],
+    "action": {
+        "default_popup": "/html/popup.html"
     }
 }
