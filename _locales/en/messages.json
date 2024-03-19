@@ -1,0 +1,10 @@
+{
+    "name": {
+        "message": "Kapusta",
+        "description": "ext name"
+    },
+    "description": {
+        "message": "Receive up-to-date information about borrowers and lenders, quickly and in a convenient format!",
+        "descriprion": "ext descriprion"
+    }
+}

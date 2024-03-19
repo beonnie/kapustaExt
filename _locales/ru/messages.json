@@ -1,0 +1,10 @@
+{
+    "name": {
+        "message": "Капуста",
+        "description": "ext name"
+    },
+    "description": {
+        "message": "Получайте актуальные данные о заёмщиках и займодавцах, быстро и в удобном формате!",
+        "descriprion": "ext descriprion"
+    }
+}
