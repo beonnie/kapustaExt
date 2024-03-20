@@ -9,15 +9,7 @@
         "64":"./icons/main64.png",
         "128":"./icons/main128.png"
     },
-    "content_scripts": [
-        {
-          "matches": ["https://kapusta.by/"],
-          "run_at": "document_idle",
-          "all_frames": false,
-          "js": ["js/content_script.js"]
-        }
-      ],
-    "host_permissions": ["https://kapusta.by/"],
+    "host_permissions": ["<all_urls>"],
     "action": {
         "default_popup": "/html/popup.html"
     },
@@ -28,5 +20,11 @@
       "storage",
       "alarms",
       "notifications"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["/js/content_script.js"]
+    }
   ]
 }
