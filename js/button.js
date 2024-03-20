@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function  renderClickHandler(){
-  
+  chrome.tabs.create({"url": "https://kapusta.by/"});
 }
 
 document.addEventListener('DOMContentLoaded', function () {
