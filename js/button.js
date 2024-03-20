@@ -1,5 +1,5 @@
 
-  document.querySelector('.borrowButton').addEventListener('click', borrowClickHandler);
+document.querySelector('.borrowButton').addEventListener('click', borrowClickHandler);
 
 function  borrowClickHandler(){
   chrome.tabs.create({"url": "http://localhost:8090/kp/v1/getBorrow"});
@@ -12,25 +12,16 @@ function  lendClickHandler(){
 }
 
 
+
 document.querySelector('.renderButton')
-  .addEventListener('click', function() {
-     chrome.tabs.query({
-        active: true,
-        currentWindow: true
-     }, function(tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, {
-           method: "changePage"
-        }, function(response) {
-           if (response.method === "changePage") {
-              alert("Succeeded with " + response.method);
-           }
-        });
-     });
+.addEventListener('click', function(){
+   
+   chrome.runtime.sendMessage({ greeting: 'hello'}, function(response){
+      alert(response.msg)
+   } )
+   
 })
 
 
-document.querySelector('.dealButton').addEventListener('click', dealClickHandler);
 
-function  dealClickHandler(){
-  
-}
+ 

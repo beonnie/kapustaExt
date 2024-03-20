@@ -3,6 +3,9 @@
     "name": "__MSG_name__",
     "version": "0.1.0",
     "manifest_version": 3,
+    "background": {
+      "service_worker": "/js/background.js"
+    },
     "description": "__MSG_description__",
     "icons": {
         "32":"./icons/main32.png",
