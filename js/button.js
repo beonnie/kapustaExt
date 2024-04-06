@@ -13,14 +13,19 @@ function  lendClickHandler(){
 
 
 
-document.querySelector('.renderButton')
-.addEventListener('click', function(){
-   
-   chrome.runtime.sendMessage({ greeting: 'hello'}, function(response){
-      alert(response.msg)
-   } )
-   
-})
+
+async function renderClickHandler(){
+
+  setTimeout(()=>{
+    const a = document.querySelectorAll('button');
+    alert(a.length)
+    }, 500)
+
+}
+
+document.querySelector('.renderButton').addEventListener('click', renderClickHandler);
+
+
 
 
 
